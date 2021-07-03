@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  box-sizing: border-box;
+  background: whitesmoke;
+  font-family: sans-serif;
+}
+canvas {
+  background: white;
+}
+.topbar {
+  display: flex;
+  /* position: fixed; */
+  background: #2e2e2e;
+  padding: 0 10px;
+  color: white;
+}
+.topbar span {
+  padding: 5px 10px;
+  background: white;
+  color: black;
+  border: 1px solid black;
+}
+.topbar span:hover {
+  background: #ddd;
+}
+.topbar .selected {
+  background: black;
+  color: white;
+  border: 2px solid white;
+}
+

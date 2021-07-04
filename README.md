@@ -11,12 +11,12 @@ https://github.com/Akatsuki-discordTeam/Whiteboard-Hackathon1/projects/1
 
 | Task                         | Member Assign    | Status  |
 |----------------------------- | ---------------- | ------- |
-|Base Canvas                   | REX     | ✅    |
-|Erase Tool                    | ANSH    | ❌    |
-|Shape Tool                    | Satya   | ❌    |
-|Improve The Canvas            | Hatsh   | ❌    |
-|Text Tool                     | REX     | ❌    |
-|Change Pen With               | -     | ❌    |
+|Base Canvas                   | REX       | ✅    |
+|Erase Tool                    | ANSH      | ❌    |
+|Shape Tool                    | Satya     | ❌    |
+|Improve The Canvas            | Hatsh     | ❌    |
+|Text Tool                     | REX       | ✅    |
+|Change Pen With               | Gautam_s  | ✅    |
 |Change Background Color       | -     | ❌    |
 |Change Background Frame       | -     | ❌    |
 |Save & Load Option            | -     | ❌    |

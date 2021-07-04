@@ -1,5 +1,6 @@
 const line = document.querySelector("#line");
 const text = document.querySelector("#text");
+const Rectangle = document.querySelector("#Rectangle");
 
 const spans = document.querySelectorAll("span");
 var selectedOption = "Line";
@@ -20,7 +21,7 @@ select.addEventListener('change', (e) => {
 }, false);
 
 
-[line, text].forEach(elem => {
+[line, text, Rectangle].forEach(elem => {
     elem.addEventListener("click", () => {
         clearOption()
         elem.classList.add("selected");
@@ -32,6 +33,9 @@ select.addEventListener('change', (e) => {
 canvas.addEventListener("click", (event) => {
     if(selectedOption == "Text"){
         textMode(event, ctx)
+    } else if(selectedOption == "Rectangle"){
+        console.log("Rectangle is triggered")
+        Rect(event, ctx)
     }
 })
 

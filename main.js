@@ -4,18 +4,7 @@ var body = document.getElementsByTagName("body")[0];
 var ctx = canvas.getContext("2d");
 let currentSize = 3;
 var currentColor = "rgba(0,0,0, 0.4)";
-let selectedColor =  "rgba(0,0,0, 0.4)";
 var currentBg = "#fff";
-const erase = document.querySelector("#erase");
-
-
-
-erase.addEventListener("click", eraser, false);
-
-function eraser() {
-  currentSize = 50;
-  currentColor = currentBg
-}
 
 createCanvas();
 
@@ -81,7 +70,7 @@ function mousedown(canvas, evt) {
   ctx.beginPath();
   ctx.lineWidth = currentSize;
   ctx.lineCap = "round";
-  ctx.strokeStyle = selectedColor;
+  ctx.strokeStyle = currentColor;
 }
 
 function mousemove(canvas, evt) {

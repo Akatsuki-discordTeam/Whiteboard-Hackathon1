@@ -1,9 +1,9 @@
 function trackDrag(onMove, onEnd) {
     function end(event) {
         removeEventListener('mousemove', onMove);
-        removeEventListener('mouseup', end);
-        if (onEnd)
-        onEnd(event);
+        removeEventListener('mouseup', onEnd(event));
+        // if (onEnd)
+        // onEnd(event);
     }
     addEventListener('mousemove', onMove);
     addEventListener('mouseup', end);
@@ -63,6 +63,6 @@ Rect = function(event, cx) {
       cx.fillRect(leftX, topY, rightX - leftX, bottomY - topY);
       
         // destroy placeholder
-      document.body.removeChild(placeholder);
+        document.body.removeChild(placeholder);
     });
   };

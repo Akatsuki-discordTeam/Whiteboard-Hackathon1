@@ -7,7 +7,7 @@ https://akatsuki-discordteam.github.io/Whiteboard-Hackathon1/
 https://github.com/Akatsuki-discordTeam/Whiteboard-Hackathon1/projects/1
 
 
-# Completed THA's
+# Completed Whiteboard Task's
 
 | Task                         | Member Assign    | Status  |
 |----------------------------- | ---------------- | ------- |

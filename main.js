@@ -16,10 +16,10 @@ function createCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
   });
-  window.addEventListener("resize", () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  });
+  // window.addEventListener("resize", () => {
+  //   canvas.width = window.innerWidth;
+  //   canvas.height = window.innerHeight;
+  // });
   // canvas.width = 800;
   // canvas.height = 800;
   canvas.style.zIndex = 8;

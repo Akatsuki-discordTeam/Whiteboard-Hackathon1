@@ -39,3 +39,8 @@ canvas {
   color: white;
   border: 2px solid white;
 }
+/* For any shape tools that need a live preview */
+.placeholder {
+  position: absolute;
+  z-index: 999;
+}

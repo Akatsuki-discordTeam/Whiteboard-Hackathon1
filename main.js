@@ -47,14 +47,6 @@ if (document.querySelector("#line").classList == "selected") {
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-canvas.addEventListener("mousedown", function () {
-  mousedown(canvas, event);
-});
-canvas.addEventListener("mousemove", function () {
-  mousemove(canvas, event);
-});
-canvas.addEventListener("mouseup", mouseup);
-
 function getMousePos(canvas, evt) {
   var rect = canvas.getBoundingClientRect();
   return {

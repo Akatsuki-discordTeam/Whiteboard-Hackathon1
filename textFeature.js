@@ -30,6 +30,20 @@ select.addEventListener('change', (e) => {
     }, false)
 })
 
+
+// Line(event, ctx)
+canvas.addEventListener("mousedown", function () {
+    if(selectedOption == "Line"){
+        mousedown(canvas, event);
+    }
+});
+canvas.addEventListener("mousemove", function () {
+    if(selectedOption == "Line"){
+        mousemove(canvas, event);
+    }
+});
+canvas.addEventListener("mouseup", mouseup);
+
 canvas.addEventListener("click", (event) => {
     if(selectedOption == "Text"){
         textMode(event, ctx)

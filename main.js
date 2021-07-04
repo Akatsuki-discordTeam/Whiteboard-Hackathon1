@@ -8,9 +8,7 @@ var linesArray = [];
 var index = -1;
 
 var currentColor = "rgba(0,0,0, 0.4)";
-var currentBg = "white";
-
-var eraseMode = false;
+var currentBg = "#fff";
 
 createCanvas();
 
@@ -20,6 +18,16 @@ function createCanvas() {
   // canvas.height = parseInt(document.getElementById("sizeY").value);
   canvas.width = 800;
   canvas.height = 800;
+  window.addEventListener("load", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+  // window.addEventListener("resize", () => {
+  //   canvas.width = window.innerWidth;
+  //   canvas.height = window.innerHeight;
+  // });
+  // canvas.width = 800;
+  // canvas.height = 800;
   canvas.style.zIndex = 8;
   canvas.style.position = "absolute";
   canvas.style.border = "1px solid #547c9a";
@@ -35,6 +43,22 @@ canvas.addEventListener("mousemove", function () {
   mousemove(canvas, event);
 });
 canvas.addEventListener("mouseup", mouseup);
+/////////////////////////////////////////////////////////////////////////////////////////////
+// Size of the brush tool
+////////////////////////////////////////////////////////////////////////////////////////////
+if (document.querySelector("#line").classList == "selected") {
+  const select = document.getElementById("brush_size");
+  var sizes = [1, 2, 3, 5, 8, 12, 25, 35, 50, 75, 100];
+  select.addEventListener(
+    "change",
+    (e) => {
+      currentSize = select.value;
+    },
+    false
+  );
+}
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 function getMousePos(canvas, evt) {
   var rect = canvas.getBoundingClientRect();
@@ -59,15 +83,6 @@ function mousemove(canvas, evt) {
     var currentPosition = getMousePos(canvas, evt);
     ctx.lineTo(currentPosition.x, currentPosition.y);
     ctx.stroke();
-  }
-
-  if (mousedown && eraseMode) {
-    ctx.beginPath();
-    var currentPosition = getMousePos(canvas, evt);
-    ctx.arc(currentPosition.x, currentPosition.y, 40, 0, 2 * Math.PI, false);
-    ctx.fillStyle = currentBg;
-    ctx.fill();
-    ctx.closePath();
   }
 }
 
@@ -100,3 +115,15 @@ function undo() {
 //
 
 //
+
+function mousemove(canvas, evt) {
+  if (isMouseDown) {
+    var currentPosition = getMousePos(canvas, evt);
+    ctx.lineTo(currentPosition.x, currentPosition.y);
+    ctx.stroke();
+  }
+}
+
+function mouseup() {
+  isMouseDown = false;
+}

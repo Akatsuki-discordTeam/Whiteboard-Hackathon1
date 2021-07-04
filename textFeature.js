@@ -1,9 +1,12 @@
 const line = document.querySelector("#line");
 const text = document.querySelector("#text");
+const Rectangle = document.querySelector("#Rectangle");
+
 const spans = document.querySelectorAll("span");
 var selectedOption = "Line";
 ctx.fillStyle = "black";
 var brushSize = 7;
+
 
 const select = document.getElementById("brush_size");
 var sizes = [1, 2, 3, 5, 8, 12, 25, 35, 50, 75, 100];
@@ -18,7 +21,7 @@ select.addEventListener('change', (e) => {
 }, false);
 
 
-[line, text].forEach(elem => {
+[line, text, Rectangle].forEach(elem => {
     elem.addEventListener("click", () => {
         clearOption()
         elem.classList.add("selected");
@@ -27,9 +30,26 @@ select.addEventListener('change', (e) => {
     }, false)
 })
 
+
+// Line(event, ctx)
+canvas.addEventListener("mousedown", function () {
+    if(selectedOption == "Line"){
+        mousedown(canvas, event);
+    }
+});
+canvas.addEventListener("mousemove", function () {
+    if(selectedOption == "Line"){
+        mousemove(canvas, event);
+    }
+});
+canvas.addEventListener("mouseup", mouseup);
+
 canvas.addEventListener("click", (event) => {
     if(selectedOption == "Text"){
         textMode(event, ctx)
+    } else if(selectedOption == "Rectangle"){
+        console.log("Rectangle is triggered")
+        Rect(event, ctx)
     }
 })
 

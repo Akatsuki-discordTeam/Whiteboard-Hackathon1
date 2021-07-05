@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<!--<style media="screen" type="text/css">
+      .layer1_class { position: absolute; z-index: 1; top: 100px; left: 0px; visibility: visible; }
+      .layer2_class { position: absolute; z-index: 2; top: 10px; left: 10px; visibility: hidden }
+    </style>
+    <script>
+      function downLoad(){
+        if (document.all){
+            document.all["layer1"].style.visibility="hidden";
+            document.all["layer2"].style.visibility="visible";
+        } else if (document.getElementById){
+            node = document.getElementById("layer1").style.visibility='hidden';
+            node = document.getElementById("layer2").style.visibility='visible';
+        }
+      }
+    </script>-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="./first_page.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body onload="downLoad()">
+	<!--<div id="layer1" class="layer1_class">
+    <table width="100%">
+      <tr>
+        <td align="center"><strong><em>Please wait while this page is loading...</em></strong></p></td>
+      </tr>
+    </table>
+  </div>
+  <div id="layer2" class="layer2_class">
+      <script type="text/javascript">
+              alert('Just holding things up here.  While you are reading this, the body of the page is not loading and the onload event is being delayed');
+      </script>    
+  </div>-->
+	<img id="image" src="./assets/main13.jpg">
+	<div class="topnav">
+	  	<a class="item1" class="active" href="https://github.com/Akatsuki-discordTeam" target="_blank">Akatsuki Team</a>
+	  <div class="item2">
+	  	<a href="#about">Menu</a>
+	  </div>
+	</div>
+	<ul class="ul1" id="header2">
+		<li class="front"><a href="https://github.com/Akatsuki-discordTeam" target="_blank"><img src="./assets/github.png" width="30px" height="auto"></a></li>
+		<li>&ensp;</li>
+		<li class="front"><a href="https://discord.gg/8Mzhekep"  target="_blank"><img src="./assets/discord.png" width="30px" height="auto"></a></li>
+		<li>&ensp;</li>
+		<li class="front"><a href="https://www.linkedin.com/company/devsnest/"  target="_blank"><img src="./assets/linkedin.png" width="30px" height="auto"></a></li>
+	</ul>
+	<p class="front" id="header">
+		Designed with Love by Akatsuki Team
+		<a href="./index.html" target="_blank"><button class="button">Whiteboard</button></a>
+	</p>
+	<div id="explore">Explore</div>
+	<div id="contact">Contact Us</div>
+	<main id="container">
+		<div><h3 id="about" data-aos="fade-up">What's in the Whiteboard?</h3></div>
+			<div class="container">
+			  <div class="card" data-aos="fade-right">
+			    <div class="box">
+			      <div class="content">
+			        <h2>01</h2>
+			        <h3>Shape Tool</h3>
+			        <p>It creates a initial/temporary shape object using canvas methods and then by tracking the final and initial position, it draws the final object.</p>
+			        <a href="#">Learn More</a>                                        <!--links to shape tool tutorial-->
+			      </div>
+			    </div>
+			  </div>
+
+			  <div class="card" data-aos="flip-up">
+			    <div class="box">
+			      <div class="content">
+			        <h2>02</h2>
+			        <h3>Undo function</h3>
+			        <p>You can use short cut keys like ctrl+U to undo a stroke, color or any recent event.</p>
+			        <a href="#">Learn More</a>                                          <!--links to undo function tutorial-->
+			      </div>
+			    </div>
+			  </div>
+
+			  <div class="card" data-aos="fade-left">
+			    <div class="box">
+			      <div class="content">
+			        <h2>03</h2>
+			        <h3>Saving sheets</h3>
+			        <p>This option saves the current white board sheet on your local storage.</p>
+			        <a href="#">Learn More</a>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+	</main>
+	<main id="container2">
+		<div class="blog-card spring-fever" data-aos="fade-up">
+		  <div class="title-content">
+		    <h3><a href="#">Contact Us</a></h3>
+		    <!--<div class="intro"> <a href="#">Inspiration</a> </div>-->
+		  </div>
+		  <div class="card-info">
+		    Here's a link to our github profile page. Or you can mail us at lailabhai7732@gmail.com. Thank you for contacting us!  
+		    <a href="https://github.com/Akatsuki-discordTeam">Akatsuki<span class="licon icon-arr icon-black"></span></a>
+		  </div>
+		  <!--<div class="utility-info">
+		    <ul class="utility-list">
+		      <li><span class="licon icon-like"></span><a href="#">2</a></li>
+		      <li><span class="licon icon-com"></span><a href="#">12</a></li>
+		      <li><span class="licon icon-dat"></span>03 jun 2017</li>
+		      <li><span class="licon icon-tag"></span><a href="#">Photos</a>, <a href="#">Nice</a></li>
+		    </ul>
+		  </div>-->
+		  <div class="gradient-overlay"></div>
+		  <div class="color-overlay"></div>
+		</div>
+	</main>
+	<div id="container3" style="height: 50px; background-color: darkslategrey; color: floralwhite;">
+		<div style="padding-left: 20px;">Akatsuki Team <span style="float: right; padding-right: 20px;"> Email : lailabhai7732@gmail.com</span></div>
+		<div style="padding-left:20px;">&copy; 2021. All rights reserved.</div>
+	</div>
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script type="text/javascript" src="first_page.js"></script>
+</html>

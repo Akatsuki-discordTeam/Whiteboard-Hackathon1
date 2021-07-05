@@ -1,26 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Whiteboard</title>
-    <link rel="stylesheet" href="board.css" />
-  </head>
-  <body>
-    <div class="topbar">
-      <span id="line">Line</span>
-      <span id="text">Text</span>
-      <span><button class="undo" onclick="">Undo</button></span>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>canvas</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+	<!--<nav id="navbar">
+		<div class="topnav">
+		  <a class="active" href="#home">Home</a>
+		  <a href="#news">News</a>
+		  <a href="#contact">Contact</a>
+		  <a href="#about">About</a>
+		</div>
+	</nav>
+	<canvas id="myCanvas" width="1000px" height="800px"></canvas>
+	<script type="text/javascript" src="./script.js"></script>-->
 
-      <span id="pen_option"><select id="brush_size"></select></span>
-      <a id="download">download</a>
-      <a id="Rectangle">Rectangle</a>
-      <!--     <span id="erase">Erase</span>  -->
-    </div>
-    <script src="main.js"></script>
-    <script src="textFeature.js"></script>
-    <script src="downloadCanvas.js"></script>
-    <script src="shapeTool.js"></script>
-  </body>
+
+
+
+
+	  <script src="https://kit.fontawesome.com/628c8d2499.js" crossorigin="anonymous"></script>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <nav id="menu">
+            <div class="menu-item">
+                <div class="menu-text">
+                    <a href="#">Draw tool</a>
+                </div>
+                <div class="sub-menu">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fal fa-wind-turbine"></i></div>
+                        <div class="text">
+                            <div class="title">Pen <i class="far fa-arrow-right"></i></div>
+                            <div class="sub-text">It gives normal pen like strokes.</div>
+                        </div>
+                    </div>
+                    <div class="icon-box">
+                        <div class="icon"><i class="fal fa-lightbulb-on"></i></div>
+                        <div class="text">
+                            <div class="title">Spray <i class="far fa-arrow-right"></i></div>
+                            <div class="sub-text">It will throw ink particles on sheet.</div>
+                        </div>
+                    </div>
+                    <div class="icon-box">
+                        <div class="icon"><i class="fal fa-bomb"></i></div>
+                        <div class="text">
+                            <div class="title">Paint <i class="far fa-arrow-right"></i></div>
+                            <div class="sub-text">It works like a paint brush.</div>
+                        </div>
+                    </div>
+                    <div class="sub-menu-holder"></div>
+                </div>
+            </div>
+            <div class="menu-item highlight">
+                <div class="menu-text">
+                    <a href="#">Shape tool</a>
+                </div>
+                <div class="sub-menu double">
+                    <div class="icon-box gb a">
+                        <div class="icon"><i class="far fa-question-circle"></i></div>
+                        <div class="text">
+                            <div class="title">Rectangle <i class="far fa-arrow-right"></i></div>
+                            <div class="sub-text">Draws rectangle on sheet.</div>
+                        </div>
+                    </div>
+                    <div class="icon-box gb b">
+                        <div class="icon"><i class="far fa-users-class"></i></div>
+                        <div class="text">
+                            <div class="title">Triangle <i class="far fa-arrow-right"></i></div>
+                            <div class="sub-text">Draws triangle on sheet.</div>
+                        </div>
+                    </div>
+                    <div class="icon-box gb c">
+                        <div class="icon"><i class="far fa-school"></i></div>
+                        <div class="text">
+                            <div class="title">Circle<i class="far fa-arrow-right"></i></div>
+                            <div class="sub-text">Draws circle on sheet.</div>
+                        </div>
+                    </div>
+                    <div class="icon-box gb d">
+                        <div class="icon"><i class="far fa-chess-rook"></i></div>
+                        <div class="text">
+                            <div class="title">Cone <i class="far fa-arrow-right"></i></div>
+                            <div class="sub-text">Draws cone on sheet.</div>
+                        </div>
+                    </div>
+                    <div class="icon-box gb e">
+                        <div class="icon"><i class="far fa-video-plus"></i></div>
+                        <div class="text">
+                            <div class="title">Cylinder <i class="far fa-arrow-right"></i></div>
+                            <div class="sub-text">Draws cylinder on sheet</div>
+                        </div>
+                    </div>
+                    <div class="icon-box gb f">
+                        <div class="icon"><i class="far fa-cat"></i></div>
+                        <div class="text">
+                            <div class="title">Box <i class="far fa-arrow-right"></i></div>
+                            <div class="sub-text">Draws box on sheet.</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="menu-item highlight">
+                <div class="menu-text">
+                    <a href="#">Save/Undo</a>
+                </div>
+                <div class="sub-menu triple">
+                    <div class="top-container gb c icon-box">
+                        <div class="icon big"><i class="far fa-book"></i></div>
+                        
+                    </div>
+                    <div class="box">
+                        <h3>Save sheet</h3>
+                        <a id="download">Save current sheet</a>
+                        
+                    </div>
+                    <div class="box">
+                        <h3>Undo</h3>
+                        <a href="#">Retrieve strokes</a>
+                        
+                    </div>
+                    <div class="box">
+                        <h3>Clear</h3>
+                        <a href="#" id="clearScreen">Clear Screen</a>
+                        
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-text">
+                    <a href="#">Other tools</a>
+                </div>
+                <div class="sub-menu">
+                    <div class="icon-box">
+                        <div class="icon"><i class="far fa-satellite"></i></div>
+                        <div class="text">
+                            <div class="title">Eraser <i class="far fa-arrow-right"></i></div>
+                            <div class="sub-text">Slide to change eraser size.</div>
+                        </div>
+                    </div>
+                    <div class="icon-box">
+                        <div class="icon"><i class="fab fa-twitter-square"></i></div>
+                        <div class="text">
+                            <div class="title">Colors <i class="far fa-arrow-right"></i></div>
+                            <div class="sub-text">Select from different colors.</div>
+                        </div>
+                    </div>
+                    <div class="icon-box">
+                        <div class="icon"><i class="fab fa-twitch"></i></div>
+                        <div class="text">
+                            <div class="title">Pen size <i class="far fa-arrow-right"></i></div>
+                            <div class="sub-text">Slide to change pen size.</div>
+                        </div>
+                    </div>
+                    <div class="sub-menu-holder"></div>
+                </div>
+            </div>
+            <div id="sub-menu-container">
+                <div id="sub-menu-holder">
+                    <div id="sub-menu-bottom">
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+ <canvas id="myCanvas" width="1000px" height="800px"></canvas>
+	<script type="text/javascript" src="./script.js"></script>
+</body>
 </html>

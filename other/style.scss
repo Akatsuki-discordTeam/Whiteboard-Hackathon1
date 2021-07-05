@@ -1,0 +1,12 @@
+body {
+	div.darkmode {
+		display: inline-block; //1
+		font-size: 2rem; //2
+		padding:1rem 1rem 0.75rem 1rem; //3
+		cursor: pointer; //4
+	}
+	&.dark .darkmode .light,
+	&:not(.dark) .darkmode .dark {
+		display: none; //5
+	}
+}

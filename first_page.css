@@ -77,7 +77,8 @@ p{
 }
 .topnav .item2:hover{
 	font-size: xx-large;
-	width: 100px;
+  padding-right: 25px;
+	width: 200px;
 	height: auto;
 }
 /*.topnav a.active {

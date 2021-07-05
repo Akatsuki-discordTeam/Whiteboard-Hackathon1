@@ -17,11 +17,11 @@ https://github.com/Akatsuki-discordTeam/Whiteboard-Hackathon1/projects/1
 |Text Tool                     | REX       | ✅    |
 |Change Pen With               | Gautam_s  | ✅    |
 |Download Drawing              | Rex       | ✅    |
-|Shape Tool                    | Rex       | ❌    |
+|Shape Tool                    | Rex       | ✅    |
 |Undo  Tool                    | Satya     | ❌    |
-|Spray Tool                    | Satya     | ❌    |
+|Spray Tool                    | Satya     | ✅    |
 |Adding Icons                  | Hatsh     | ❌    |
-|Project Representation        | Hatsh     | ❌    |
+|Project Representation        | Hatsh     | ✅    |
 |Change Background Color       | -     | ❌    |
 |Change Background Frame       | -     | ❌    |
 |Save & Load Option            | -     | ❌    |
